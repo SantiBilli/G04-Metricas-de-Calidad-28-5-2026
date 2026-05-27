@@ -1,0 +1,129 @@
+@import 'tailwindcss';
+
+@layer base {
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 300,
+      'GRAD' 0,
+      'opsz' 24;
+  }
+}
+
+@theme inline {
+  /* 01. Tipografía */
+  --font-sans: var(--font-lato), sans-serif;
+
+  /* Fondos */
+  --degrade-fondo: linear-gradient(148deg, #232525 0%, #000 100%);
+
+  /* 02. Paleta de Color - Colores Primarios */
+  --color-dorado: #d8b668;
+  --color-negro: #0c0f0f;
+  --color-blanco: #f5f3ef;
+
+  /* 02. Paleta de Color - Colores Neutros */
+  --color-neutral-a90: #231f20;
+  --color-neutral-a80: #4d4638;
+  --color-neutral-a60: #5d5d5d;
+  --color-deep: #30300e;
+  --color-neutral: #836620;
+  --color-highlight: #f0dead;
+  --color-deepest: #8b6e29;
+  --color-box: #1a1c1c;
+
+  /* 04. Padding y Border Radius */
+  --radius-sm: 10px;
+  --radius-lg: 12px;
+
+  /* 05. Iconografía */
+  --icon-size: 24px;
+  --icon-margin: 2px;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+    font-family: var(--font-sans);
+    font-size: 1rem; /* 16px */
+    font-weight: 400; /* Regular */
+    line-height: 1.4;
+  }
+
+  /* 01. Tipografía - Estilos de Texto (Headings) */
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1.2;
+    color: var(--color-negro);
+  }
+
+  h1 {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 700; /* Bold */
+  }
+
+  h2 {
+    font-size: 1.125rem; /* 18px */
+    font-weight: 700; /* Bold */
+  }
+
+  h3 {
+    font-size: 1rem; /* 16px */
+    font-weight: 600; /* Semi-bold */
+  }
+
+  h4 {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 400; /* Regular */
+  }
+
+  /* 01. Tipografía - Estilos de Texto (Body) */
+  p {
+    font-size: 1rem; /* 16px */
+    font-weight: 400; /* Regular */
+    line-height: 1.4;
+  }
+}
+
+@layer utilities {
+  /* Utilidades extra para los textos de Body que salen del estándar */
+  .text-body-lg {
+    font-size: 0.9375rem; /* 15px */
+    line-height: 1.4;
+  }
+
+  .text-nav-bar {
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.4;
+  }
+
+  .text-button {
+    font-size: 0.75rem; /* 12px */
+    line-height: 1.4;
+  }
+
+  /* Gaps principales definidos en el Design System */
+  .gap-primary {
+    gap: 24px;
+  }
+
+  .gap-secondary {
+    gap: 10px;
+  }
+}
